@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the commercial license
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+ * @category Extait
+ * @package Extait_WidgetsTransfer
+ * @copyright Copyright (c) 2016-2018 Extait, Inc. (http://www.extait.com)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Widgets Pro</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <uiComponent name="extait_widgets_listing" ifconfig="extait_widgets_transfer/general/enable_module"/>
+        </referenceContainer>
+    </body>
+</page>

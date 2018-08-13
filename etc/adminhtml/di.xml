@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the commercial license
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+ * @category Extait
+ * @package Extait_WidgetsTransfer
+ * @copyright Copyright (c) 2016-2018 Extait, Inc. (http://www.extait.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Backend\Block\Widget\Form\Container">
+        <plugin name="extait_backend_widget_container" type="Extait\WidgetsTransfer\Plugin\Backend\Block\Widget\Container"/>
+    </type>
+
+    <type name="Magento\Widget\Controller\Adminhtml\Widget\Instance\Delete">
+        <plugin name="extait_widget_controller_delete" type="Extait\WidgetsTransfer\Plugin\Widget\Controller\Delete"/>
+    </type>
+</config>

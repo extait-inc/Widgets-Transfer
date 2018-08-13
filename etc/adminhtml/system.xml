@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the commercial license
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+ * @category Extait
+ * @package Extait_WidgetsTransfer
+ * @copyright Copyright (c) 2016-2018 Extait, Inc. (http://www.extait.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="extait" translate="label" sortOrder="550">
+            <label>Extait Modules</label>
+        </tab>
+
+        <section id="extait_widgets_transfer" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+            <resource>Extait_WidgetsTransfer::config</resource><!-- ACL -->
+            <class>separator-top</class>
+            <label>Theme Widgets Transfer Pro</label>
+            <tab>extait</tab>
+
+            <group id="general" translate="label" type="text" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>General Settings</label>
+
+                <field id="enable_module" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="clone" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Allow Duplicating Within the Theme</label>
+                    <comment>Duplicate widgets created earlier in the same theme</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable_module">1</field>
+                    </depends>
+                </field>
+
+                <field id="default_widgets_page" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Display the Default 'Widgets' Page</label>
+                    <comment>Allow displaying the default 'Widgets' page</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable_module">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

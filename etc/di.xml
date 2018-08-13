@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the commercial license
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+ * @category Extait
+ * @package Extait_WidgetsTransfer
+ * @copyright Copyright (c) 2016-2018 Extait, Inc. (http://www.extait.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="extait_widget_data_source" xsi:type="string">extaitWidgetsSearchResult</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="extaitWidgetsSearchResult" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">widget_instance</argument>
+            <argument name="resourceModel" xsi:type="string">\Magento\Widget\Model\ResourceModel\Widget</argument>
+        </arguments>
+    </virtualType>
+</config>
